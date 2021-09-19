@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+  ​
+  <head>
+    <!-- #region Sabio Code - You can Fold this region to remove it from sight -->
+    <meta charset="utf-8" />
+    <meta name="referrer" content="unsafe-url" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <meta name="description" content="Sabio Coding Bootcamp" />
+    <meta itemprop="image" content="https://sabio.la/Sabio.png" />
+    <link rel="shortcut icon" href="https://sabio.la/Sabio.png" />
+    <link rel="icon" type="image/png" href="https://sabio.la/Sabio.png" />
+    <!-- Do Not Change the HTML title or anything between this line and the line with the 💘's -->
+    <title>Assessment - Movies From Arrays</title>
+    <link href="https://pw.sabio.la/dist/all-site.css" rel="stylesheet" />
+
+    <script src="https://pw.sabio.la/api/js/site"></script>
+    <script src="https://pw.sabio.la/api/js/specs/assessments/60d325baA8/assessment-091A.js"></script>
+    ​
+    <!-- #endregion -->
+    <!-- I 💘 Code, You 💘 Code, We all 💘 Code -->
+    ​
+    <!-- 💡 All your CSS in here -->
+    <style></style>
+  </head>
+  ​
+  <body
+    class="sabio"
+    data-ins="pw-assessments-60d325ba8A-assessment_1A"
+    data-ins-css="false"
+  >
+    <div class="alert alert-danger text-start assesment-not-load" role="alert">
+      <p>
+        If you are still seeing this, you assessment has not loaded correctly.
+        Once you see this message disappear and the instructions loaded below
+        you will know you are on your way.
+      </p>
+    </div>
+    <!-- Do Not Edit or Remove this nav element -->
+    <nav
+      class="do-not-remove navbar navbar-expand-md navbar-dark bg-dark sabio"
+    ></nav>
+    ​
+    <div class="container workspace">
+      ​
+      <div>
+        <button id="showMovies" type="submit" class="btn btn-info ml-3 mb-5">
+          Show movies
+        </button>
+        <button
+          id="emptyMovies"
+          type="button"
+          class="btn btn-secondary ml-5 mb-5"
+        >
+          Empty Movies
+        </button>
+      </div>
+      ​
+      <div class="row">
+        ​
+        <!-- Cloned Templates go inside the element below !! -->
+        <div class="col-md-5 clone-container"></div>
+        ​
+      </div>
+    </div>
+    <script id="movieTemplate" type="text/template">
+      <div class="row my-3 t-3 card-movie ">
+          <div class="col-md-12 mb-4">
+              <div class="card border-0 shadow">
+                  <img src="https://upload.wikimedia.org/wikipedia/en/thumb/a/af/The_Godfather%2C_The_Game.jpg/220px-The_Godfather%2C_The_Game.jpg" class="card-img-top" alt="...">
+                  <div class="card-body text-center">
+                      <h5 class="card-title mb-0"> The Godfather casa Blanca</h5>
+                      <div class="card-genre text-black-50">Drama</div>
+                      <div class="card-year text-black-50">1972</div>
+                      <button type="button" class="btn btn-danger deleteMovie mt-2">Delete</button>
+                  </div>
+              </div>
+          </div>
+      </div>
+    </script>
+    ​
+    <!-- Do Not Edit or Remove this footer element -->
+    <footer
+      class="do-not-remove container-fluid footer mx-auto fb-targert sabio"
+    >
+      <p class="text-center">© Sabio.la 2019</p>
+    </footer>
+    ​
+    <!--👇🏻 All your JavaScript code goes below here inside this script tag 👇🏻 -->
+    <script id="candidateCode">
+      function startUp() {
+        wireHandlers();
+      }
+
+      function wireHandlers() {
+        $("#showMovies").on("click", onShowMovies);
+        $("#emptyMovies").on("click", emptyAllMovies);
+        $(document).on("click", ".deleteMovie", function () {
+          $(this).parent().parent().parent().parent().remove();
+        });
+      }
+
+      function getMovies() {
+        var movies = [
+          {
+            id: "35-12",
+            title: "HollywoodBlvdCinema",
+            genre: "thriller",
+            year: 2014,
+            mainImage:
+              "https://media.services.cinergy.ch/media/box1600/e0a427b3617e6391f91dc22140d95dae62e591ab.jpg",
+          },
+          {
+            id: "35-13",
+            title: "Edwards",
+            genre: "thriller",
+            year: 2002,
+            mainImage:
+              "https://pbs.twimg.com/media/ExafFT_UcAEOkVT?format=jpg&name=4096x4096",
+          },
+          {
+            id: "35-14",
+            title: "AMC",
+            genre: "thriller",
+            year: 2015,
+            mainImage:
+              "https://resizing.flixster.com/3COOGCe_sn_-dn-AnRS78f7VNBE=/206x305/v2/https://resizing.flixster.com/uAs6pQt1Hp0EhV9cTnNX12tzpgE=/ems.ZW1zLXByZC1hc3NldHMvbW92aWVzL2Q3MGJhNDU2LTkxYjEtNGE3Ny1iOTIxLTM1M2UxYTdjMzNkMi5qcGc=",
+          },
+          {
+            id: "35-15",
+            title: "Cinemark",
+            genre: "Pomo",
+            year: 2013,
+            mainImage:
+              "https://cdn.wionews.com/sites/default/files/styles/story_page/public/2021/04/23/192395-new-15.jpg",
+          },
+          {
+            id: "35-16",
+            title: "Regal Cinema 5 ",
+            genre: "Fontana",
+            year: 2014,
+            mainImage:
+              "https://m.media-amazon.com/images/M/MV5BMTQyNTkxMjUwMV5BMl5BanBnXkFtZTcwMDQ2NTU0MQ@@._V1_FMjpg_UX1000_.jpg",
+          },
+        ];
+        return movies;
+      }
+
+      function onShowMovies(e) {
+        var movies = getMovies();
+        e.preventDefault();
+        console.log(movies, "movies");
+        renderMovies(movies);
+      }
+
+      function getTemplate() {
+        var htmlFromCloneTarget = $("#movieTemplate").html();
+        console.log($(htmlFromCloneTarget));
+        return $($(htmlFromCloneTarget));
+      }
+
+      function renderMovies(moviesArr) {
+        for (let ix = 0; ix < moviesArr.length; ix++) {
+          const currentMovies = moviesArr[ix];
+          console.log(currentMovies, ix);
+          var template = getTemplate();
+          console.log(template);
+          template.find(".card-title").text(currentMovies.title);
+          template.find(".card-genre").text(currentMovies.genre);
+          template.find(".card-year").text(currentMovies.year);
+          $(".clone-container").append(template);
+        }
+      }
+      function emptyAllMovies() {
+        $(".clone-container").empty();
+        console.log("on click");
+      }
+
+      function onDeleteMovie() {
+        console.log("on click");
+        $(".clone-container").remove();
+        e.preventDefault();
+      }
+    </script>
+    <!-- 🛑 Do Not Write Any Code Below here -->
+  </body>
+  ​
+</html>

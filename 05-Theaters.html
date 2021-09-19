@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- #region Sabio Code - You can Fold this region to remove it from sight -->
+    <meta charset="utf-8" />
+    <meta name="referrer" content="unsafe-url" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <meta name="description" content="Sabio Coding Bootcamp" />
+    <meta itemprop="image" content="https://sabio.la/Sabio.png" />
+    <link rel="shortcut icon" href="https://sabio.la/Sabio.png" />
+    <link rel="icon" type="image/png" href="https://sabio.la/Sabio.png" />
+    <!-- Do Not Change the HTML title or anything between this line and the line with the 💘's -->
+    <title>Assessment - Theaters From Arrays</title>
+    <link href="https://pw.sabio.la/dist/all-site.css" rel="stylesheet" />
+
+    <script src="https://pw.sabio.la/api/js/site"></script>
+    <script src="https://pw.sabio.la/api/js/specs/assessments/87Ao3t8n3kA/theaters_assessment46f2.js"></script>
+    <style>
+      .movie-posters img {
+        /* max-height: 240px; */
+        max-width: 160px;
+      }
+
+      .card-theater .card-body span {
+        font-weight: bold;
+      }
+    </style>
+
+    <!-- #endregion -->
+    <!-- I 💘 Code, You 💘 Code, We all 💘 Code -->
+
+    <!-- 💡 All your CSS in here -->
+    <style></style>
+  </head>
+
+  <body
+    class="sabio"
+    data-ins="pw-assessments-d522ca10-assessment_85c7"
+    data-ins-css="false"
+  >
+    <div class="alert alert-danger text-left assesment-not-load" role="alert">
+      <p>
+        If you are still seeing this, you assessment has not loaded correctly.
+        Once you see this message disappear and the instructions loaded below
+        you will know you are on your way.
+      </p>
+    </div>
+    <!-- Do Not Edit or Remove this nav element -->
+    <nav
+      class="do-not-remove navbar navbar-expand-md navbar-dark bg-dark sabio"
+    ></nav>
+
+    <div class="container workspace">
+      <!-- EXAMPLE -->
+      <div class="row" id="targetContainer">
+        <h5>
+          This is an example of what the items should render as. This is 1 item.
+        </h5>
+        <div class="card mb-3 card-theater col-md-6 leave-this-card-here">
+          <div class="row movie-posters" id="itemTemplete">
+            <img
+              class="
+                img-thumbnail
+                rounded
+                mx-auto
+                d-block
+                float-end
+                first-image
+              "
+              src="https://images-na.ssl-images-amazon.com/images/I/71tglII26nL._AC_SL1001_.jpg"
+              alt="Movie 1"
+            />
+
+            <img
+              class="
+                img-thumbnail
+                rounded
+                mx-auto
+                d-block
+                float-end
+                second-image
+              "
+              src="https://images-na.ssl-images-amazon.com/images/I/71tglII26nL._AC_SL1001_.jpg"
+              alt="Movie 2"
+            />
+
+            <img
+              class="
+                img-thumbnail
+                rounded
+                mx-auto
+                d-block
+                float-end
+                thrid-image
+              "
+              src="https://cdn.shopify.com/s/files/1/1523/1900/products/il_570xN.1529338819_q19c_300x300.jpg"
+              alt="Movie 3"
+            />
+          </div>
+          <div class="row no-gutters">
+            <div class="col-md-12">
+              <div class="card-body theater-body">
+                <h5 class="card-title pt-3 pb-2 card-name">
+                  Sabio Downtown LA
+                </h5>
+                <p class="address">
+                  777 S Alameda Street,Los Angeles, CA 90021
+                </p>
+                <p>
+                  Is Open
+                  <span class="is-open">true</span>
+                </p>
+                <p>In Business Since <span class="in-business">2013</span></p>
+              </div>
+              <div class="card-footer">
+                <button
+                  id="deleteItem"
+                  type="button"
+                  class="btn btn-danger deleteItem mt-2"
+                >
+                  Delete
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div>
+        <button id="showItems" type="submit" class="btn btn-info ml-3 mb-5">
+          Show Items
+        </button>
+        <button
+          id="emptyItems"
+          type="button"
+          class="btn btn-secondary ml-5 mb-5"
+        >
+          Empty Items
+        </button>
+      </div>
+
+      <!-- Cloned Templates go inside the element below !! -->
+      <div class="row pb-5 col-md-12 clone-container"></div>
+    </div>
+
+    <script id="itemTemplate" type="text/template">
+      <div class="card mb-3 card-theater col-md-6">
+          <div class="row movie-posters">
+
+                  <img class="img-thumbnail rounded mx-auto d-block float-end  first-image"
+                      src="https://images-na.ssl-images-amazon.com/images/I/71tglII26nL._AC_SL1001_.jpg"
+                      alt="Movie 1">
+
+                  <img class="img-thumbnail rounded mx-auto d-block float-end  second-image"
+                      src="https://images-na.ssl-images-amazon.com/images/I/81iAypxHkeL._AC_SL1324_.jpg"
+                      alt="Movie 2">
+
+                  <img class="img-thumbnail rounded mx-auto d-block float-end  third-image"
+                      src="https://images-na.ssl-images-amazon.com/images/I/81iAypxHkeL._AC_SL1324_.jpg"
+                      alt="Movie 3">
+
+
+          </div>
+          <div class="row no-gutters">
+              <div class="col-md-12">
+                  <div class="card-body theater-body ">
+                      <h5 class="card-title pt-3 pb-2 card-name">Sabio Downtown LA</h5>
+                      <p class="address">777 S Alameda Street,Los Angeles, CA 90021</p>
+                      <p>
+                          Is Open
+                          <span class="is-open">true</span>
+                      </p>
+                      <p>In Business Since <span class="in-business">2013</span></p>
+                  </div>
+                  <div class="card-footer">
+                      <button type="button" class="btn btn-danger deleteItem mt-2">Delete</button>
+                  </div>
+              </div>
+          </div>
+      </div>
+    </script>
+    <!-- Do Not Edit or Remove this footer element -->
+    <footer
+      class="do-not-remove container-fluid footer mx-auto fb-targert sabio"
+    >
+      <p class="text-center">© Sabio.la 2019</p>
+    </footer>
+
+    <!--👇🏻 All your JavaScript code goes below here inside this script tag 👇🏻 -->
+    <script id="candidateCode">
+      function startUp() {
+        wireUpHandlers();
+      }
+      function wireUpHandlers() {
+        $("#showItems").on("click", onShowItems);
+        $("#emptyItems").on("click", onEmptyAllItems);
+        $(document).on("click", ".deleteItem", function () {
+          $(this).parent().parent().parent().parent().remove();
+        });
+      }
+
+      function getTheaters() {
+        var theaters = [
+          {
+            id: "35-12",
+            name: "HollywoodBlvdCinema",
+            address: "Rialto",
+            imageOne:
+              "https://media.services.cinergy.ch/media/box1600/e0a427b3617e6391f91dc22140d95dae62e591ab.jpg",
+            imageTwo:
+              "https://images-na.ssl-images-amazon.com/images/I/81iAypxHkeL._AC_SL1324_.jpg",
+            imageThree:
+              "https://www.hollywoodblvdcinema.com/wp-content/uploads/2021/06/free_guy.jpg",
+            isOpen: true,
+            openSince: 2014,
+          },
+          {
+            id: "35-13",
+            name: "Edwards",
+            address: "Ontario",
+            imageOne:
+              "https://pbs.twimg.com/media/ExafFT_UcAEOkVT?format=jpg&name=4096x4096",
+            imageTwo:
+              "http://img.cnmhstng.com/images/2021/The_Suicide_Squad463.jpg",
+            imageThree:
+              "https://media1.fdncms.com/portmerc/imager/u/original/18446541/suicide-squad-movie-2016-poster.jpeg",
+            isOpen: true,
+            openSince: 2002,
+          },
+          {
+            id: "35-14",
+            name: "AMC",
+            address: "LasVegas",
+            imageOne:
+              "https://resizing.flixster.com/3COOGCe_sn_-dn-AnRS78f7VNBE=/206x305/v2/https://resizing.flixster.com/uAs6pQt1Hp0EhV9cTnNX12tzpgE=/ems.ZW1zLXByZC1hc3NldHMvbW92aWVzL2Q3MGJhNDU2LTkxYjEtNGE3Ny1iOTIxLTM1M2UxYTdjMzNkMi5qcGc=",
+            imageTwo:
+              "https://cdn.onebauer.media/one/empire-images/articles/5c7003bf133d503e3a471075/space-jam-2.jpg?format=jpg&quality=80&width=440&ratio=1-1&resize=aspectfit",
+            imageThree:
+              "https://clutchpoints.com/wp-content/uploads/2021/04/Lakers-LeBron-James-Space-Jam-2.jpg",
+            isOpen: true,
+            openSince: 2015,
+          },
+          {
+            id: "35-15",
+            name: "Cinemark",
+            address: "Pomona",
+            imageOne:
+              "https://cdn.wionews.com/sites/default/files/styles/story_page/public/2021/04/23/192395-new-15.jpg",
+            imageTwo:
+              "https://i.pinimg.com/originals/55/9d/79/559d79aa7124d6a4190e683ff72aaf60.jpg",
+            imageThree:
+              "https://i.pinimg.com/originals/63/93/c6/6393c661673c560b332b4e49bc86e59f.jpg",
+            isOpen: false,
+            openSince: 2013,
+          },
+          {
+            id: "35-16",
+            name: "Regal Cinema 5 ",
+            address: "Fontana",
+            imageOne:
+              "https://m.media-amazon.com/images/M/MV5BMTQyNTkxMjUwMV5BMl5BanBnXkFtZTcwMDQ2NTU0MQ@@._V1_FMjpg_UX1000_.jpg",
+            imageTwo:
+              "https://img.cinemablend.com/filter:scale/cb/c/f/0/8/f/7/cf08f7da9c287b9c42665f58382078ae7fde879455b0dda2ac5559d0eacbe9d2.jpg?fw=1200",
+            imageThree:
+              "https://images.tbs.com/tbs/$dyna_params/https%3A%2F%2Fi.cdn.tbs.com%2Fassets%2Fimages%2F2021%2F01%2FHappyFeet-1692x695.jpg",
+            isOpen: true,
+            openSince: 2014,
+          },
+        ];
+        return theaters;
+      }
+
+      function getTemplate() {
+        var htmlFromCloneTarget = $("#itemTemplate").html();
+        console.log($(htmlFromCloneTarget));
+        return $(htmlFromCloneTarget);
+      }
+
+      function onShowItems(e) {
+        var theaters = getTheaters();
+        console.log(theaters, "theaters");
+        renderItems(theaters);
+        e.preventDefault();
+      }
+
+      function renderItems(itemsArray) {
+        for (let ix = 0; ix < itemsArray.length; ix++) {
+          const currentArray = itemsArray[ix];
+          console.log(currentArray, ix);
+          var template = getTemplate();
+          console.log(template);
+          template.find(".card-title").text(currentArray.name);
+          template.find(".address").text(currentArray.address);
+          template.find(".is-open").text(currentArray.isOpen);
+          $(".clone-container").append(template);
+        }
+      }
+
+      function onEmptyAllItems() {
+        $(".clone-container").empty();
+
+        console.log("on click");
+        return $(".card-theater");
+        e.preventDefault();
+      }
+
+      function onDeleteItem() {
+        console.log("on click");
+
+        e.preventDefault();
+      }
+    </script>
+    <!-- 🛑 Do Not Write Any Code Below here -->
+  </body>
+</html>

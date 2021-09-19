@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- #region Sabio Code - You can Fold this region to remove it from sight -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta name="description" content="Sabio Coding Bootcamp" />
+    <meta itemprop="image" content="https://sabio.la/Sabio.png">
+    <link rel="shortcut icon" href="https://sabio.la/Sabio.png">
+    <link rel="icon" type="image/png" href="https://sabio.la/Sabio.png" />
+    <!-- Do Not Change the HTML title or anything between this line and the line with the 💘's -->
+    <title>Object Graph Viewer</title>
+    <link href="https://pw.sabio.la/dist/all-site.css" rel="stylesheet" />
+
+    <link href="https://pw.sabio.la/css/graph.css" rel="stylesheet" />
+    <script src="https://pw.sabio.la/api/js/site"></script>
+    <script src="https://pw.sabio.la/js/util/clean.nav.js"></script>
+    <script>sabio.layout.onHelpRequested.show = true;</script>
+
+
+    <style>
+        aside.offsidebar {
+            display: none !important;
+        }
+
+        svg {
+            border: solid
+        }
+    </style>
+    <!-- #endregion -->
+</head>
+
+<body class="sabio" data-ins="pw-00">
+    <!-- Do Not Edit or Remove this nav element -->
+    <nav class="do-not-remove navbar navbar-expand-md navbar-dark bg-dark sabio"></nav>
+
+    <main role="main" class="graph-container align-middle d-flex justify-content-center" style="height:100%"
+        id="objGraph">
+
+    </main>
+
+    <!-- Do Not Edit or Remove this footer element -->
+    <footer class="do-not-remove container-fluid footer mx-auto  fb-targert sabio">
+        <p class="text-center">© Sabio.la 2019</p>
+    </footer>
+
+    <!--👇🏻 All your JavaScript code goes below here inside this script tag 👇🏻-->
+    <script id="candidateCode">
+
+        var state = {
+            firstName: "Mickey"
+            , lastName: "Mouse",
+            friends: ["Minnie", "Pluto"]
+            , age: 80
+        }
+
+        var firstPass = state;
+        var secondPass, thirdPass, forthPass;
+
+        function cycleTwo()
+        {
+            secondPass = state
+            renderObjects({ firstPass, secondPass, thirdPass, forthPass })
+        }
+
+        function cycleThree()
+        {
+            state.firstName = "Michael"
+            thirdPass = state
+            renderObjects({ firstPass, secondPass, thirdPass, forthPass })
+        }
+
+    </script>
+    <!-- 🛑 Do Not Write Any Code Below here -->
+</body>
+
+</html>

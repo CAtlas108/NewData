@@ -1,0 +1,17 @@
+selector {
+  property: value;
+}
+
+/* Comment CTRL+/ Creates the Comments 
+   Element Name: All <h1>,<p>,<a>
+
+*/
+
+elementName {
+  property: value;
+}
+#idname {
+  property: value;
+}
+[attr=value]: {
+}
